@@ -1,0 +1,95 @@
+
+
+============================== 2022-11-18 13:23:28.323468 | 6654257d-4be2-446d-8365-bdc38eaa8cc4 ==============================
+[0m13:23:28.323484 [info ] [MainThread]: Running with dbt=1.3.1
+[0m13:23:28.323991 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/huxiaod/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'jaffle_shop', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m13:23:28.324181 [debug] [MainThread]: Tracking: tracking
+[0m13:23:28.360927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a89cb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a89cb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a89c9d0>]}
+[0m13:23:28.362591 [info ] [MainThread]: Creating dbt configuration folder at /Users/huxiaod/.dbt
+[0m13:23:28.366940 [debug] [MainThread]: Starter project path: /Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/include/starter_project
+[0m13:24:02.987860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d00400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b215f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b215040>]}
+[0m13:24:02.988507 [debug] [MainThread]: Flushing usage events
+[0m13:24:04.460638 [error] [MainThread]: Encountered an error:
+
+[0m13:24:04.464357 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/main.py", line 135, in main
+    results, succeeded = handle_and_check(args)
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/main.py", line 198, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/main.py", line 245, in run_from_args
+    results = task.run()
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/task/init.py", line 332, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/task/init.py", line 207, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/task/init.py", line 191, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/dbt/task/init.py", line 157, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/Users/huxiaod/Documents/github/dbt-tutorial/dbt-env/lib/python3.9/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2022-11-18 14:05:36.535669 | 3b92c9dc-f91b-4006-aecf-ccc911bd528a ==============================
+[0m14:05:36.535682 [info ] [MainThread]: Running with dbt=1.3.1
+[0m14:05:36.536439 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/huxiaod/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m14:05:36.536685 [debug] [MainThread]: Tracking: tracking
+[0m14:05:36.574365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106093550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106093a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106093850>]}
+[0m14:05:36.585396 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.bigquery'
+[0m14:05:36.586383 [debug] [MainThread]: Executing "git --help"
+[0m14:05:36.624358 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:05:36.625656 [debug] [MainThread]: STDERR: "b''"
+[0m14:05:36.627941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060939d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060e6f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060e65b0>]}
+[0m14:05:36.628759 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-11-18 14:15:10.655410 | 150349c5-b1f7-4305-98a5-4cccc2a68b45 ==============================
+[0m14:15:10.655429 [info ] [MainThread]: Running with dbt=1.3.1
+[0m14:15:10.656926 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/huxiaod/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m14:15:10.657437 [debug] [MainThread]: Tracking: tracking
+[0m14:15:10.683934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ca7ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c94d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c94ee0>]}
+[0m14:15:11.889075 [debug] [MainThread]: Executing "git --help"
+[0m14:15:11.910929 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:15:11.912237 [debug] [MainThread]: STDERR: "b''"
+[0m14:15:11.921186 [debug] [MainThread]: Acquiring new bigquery connection "debug"
+[0m14:15:11.923531 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:15:11.927727 [debug] [MainThread]: On debug: select 1 as id
+[0m14:18:16.149727 [debug] [MainThread]: Flushing usage events
+[0m14:18:16.569119 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:18:16.569509 [info ] [MainThread]: ctrl-c
+
+
+============================== 2022-11-18 14:20:35.175961 | 59ce65a0-de7e-4ef5-be8b-be84108e706c ==============================
+[0m14:20:35.175975 [info ] [MainThread]: Running with dbt=1.3.1
+[0m14:20:35.176890 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/huxiaod/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m14:20:35.177126 [debug] [MainThread]: Tracking: tracking
+[0m14:20:35.201262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d21fac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d20bd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d20bee0>]}
+[0m14:20:35.699803 [debug] [MainThread]: Executing "git --help"
+[0m14:20:35.720638 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:20:35.721642 [debug] [MainThread]: STDERR: "b''"
+[0m14:20:35.762991 [debug] [MainThread]: Acquiring new bigquery connection "debug"
+[0m14:20:35.766601 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:20:35.807104 [debug] [MainThread]: On debug: select 1 as id
+[0m14:21:50.121393 [debug] [MainThread]: Flushing usage events
+[0m14:21:50.938024 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:21:50.939647 [info ] [MainThread]: ctrl-c
+
+
+============================== 2022-11-18 14:33:28.455490 | 585718a1-cced-466e-95f4-0592ef51341e ==============================
+[0m14:33:28.455520 [info ] [MainThread]: Running with dbt=1.3.1
+[0m14:33:28.456822 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/huxiaod/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m14:33:28.457163 [debug] [MainThread]: Tracking: tracking
+[0m14:33:28.484322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112349e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ead6040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112338f10>]}
+[0m14:33:28.950235 [debug] [MainThread]: Executing "git --help"
+[0m14:33:28.971036 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:33:28.972271 [debug] [MainThread]: STDERR: "b''"
+[0m14:33:28.980753 [debug] [MainThread]: Acquiring new bigquery connection "debug"
+[0m14:33:28.982645 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:33:28.987600 [debug] [MainThread]: On debug: select 1 as id
+[0m14:34:57.041760 [debug] [MainThread]: Flushing usage events
+[0m14:34:57.301401 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:34:57.301884 [info ] [MainThread]: ctrl-c
